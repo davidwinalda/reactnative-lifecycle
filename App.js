@@ -2,7 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { Splash, Login } from './pages';
+import { Splash, Login, Landing, Session4 } from './pages';
 
 const App = () => {
   const Stack = createStackNavigator();
@@ -12,9 +12,11 @@ const App = () => {
         screenOptions={{
           headerShown: false
         }} 
-        initialRouteName="Splash">
+        initialRouteName="Landing">
         <Stack.Screen name="Splash" component={Splash} />
         <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Landing" component={Landing} />
+        <Stack.Screen name="Session4" component={Session4} />
       </Stack.Navigator>
     </NavigationContainer>
   );
